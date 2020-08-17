@@ -2,6 +2,7 @@
 # Script generador de configuraciones para Live-Build Debian GNU Linux Buster
 # Autor Fernando Sfeir - NiuX para la HLN
 # fersfeir EN niux PUNTO com PUNTO ar
+# https://niux.com.ar/
 
 # Directorio donde se generará la imagen
 DIRECTORIO=/home/HLN-Distro
