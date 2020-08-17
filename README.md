@@ -6,7 +6,7 @@ Script y configuraciones de pruebas para la generación de una live-build con GN
 * preseed.cfg Archivo de respuestas (es descargado directamente desde el script GeneradorImagen.sh).
 
 ## Utilización
-Descargar el archivo y ejecutarlo (debe ser root):
+Desde una instalación ya realizada de Debian Buster GNU/Linux, descargar el archivo y ejecutarlo (debe ser root):
 ```
 wget https://raw.githubusercontent.com/fersfeir/DebianHLN/master/GeneradorImagen.sh && sh GeneradorImagen.sh
 ```
