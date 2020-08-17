@@ -47,4 +47,7 @@ wget https://github.com/fersfeir/DebianHLN/raw/master/preseed.cfg
 mv preseed.cfg $DIRECTORIO/config/includes.installer/preseed.cfg
 
 # Comienzo la generación de la imagen
-lb build
+# lb clean -> is  responsible  for  cleaning up after a system is built. It removes the build directories, and removes some other files including stage files,  and  any  detritus  left behind by other live-build commands.
+# lb build -> alias for all build stages
+
+lb clean ; lb build
