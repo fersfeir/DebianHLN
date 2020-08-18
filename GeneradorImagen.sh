@@ -34,7 +34,7 @@ cd $DIRECTORIO
 # --iso-publisher NiuX-https://niux.com.ar -> sets the PUBLISHED field in the header of a resulting CD/DVD image
 # --iso-volume debianHLN -> sets the VOLUME field in the header of a resulting CD/DVD
 
-lb config --binary-images iso-hybrid --mode debian --architectures i386 --linux-flavours i386 --distribution buster --archive-areas "main contrib non-free" --updates true --security true --cache true --apt-recommends true --debian-installer live --debian-installer-gui true --win32-loader false --iso-application debianHLN --iso-preparer FerSfeir --iso-publisher NiuX-https://niux.com.ar --iso-volume debianHLN
+lb config --binary-images iso-hybrid --mode debian --architectures i386 --linux-flavours 686-pae --distribution buster --archive-areas "main contrib non-free" --updates true --security true --cache true --apt-recommends true --debian-installer live --debian-installer-gui true --win32-loader false --iso-application debianHLN --iso-preparer FerSfeir --iso-publisher NiuX-https://niux.com.ar --iso-volume debianHLN
 
 # Agrego tareas
 echo task-xfce-desktop > $DIRECTORIO/config/package-lists/tareas.list.chroot
