@@ -4,6 +4,9 @@
 # fersfeir EN niux PUNTO com PUNTO ar
 # https://niux.com.ar/
 
+# Instalo los paquetes necesarios
+apt install -y live-build
+
 # Directorio donde se generará la imagen
 DIRECTORIO=/home/HLN-Distro
 
