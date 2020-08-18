@@ -19,7 +19,7 @@ cd $DIRECTORIO
 # --binary-images iso-hybrid -> defines the image type to build. By default, for images using syslinux this is set to iso-hybrid to build CD/DVD images that may also be used like hdd images
 # --mode debian -> defines a global mode to load project specific defaults. By default this is set to debian
 # --architectures i386 -> defines the architecture of the to be build image
-# --linux-flavours i386 -> sets the kernel flavours to be installed
+# --linux-flavours 686-pae -> sets the kernel flavours to be installed
 # --distribution buster -> defines the distribution of the resulting live system
 # --archive-areas "main contrib non-free" -> defines which package archive areas of a debian packages archive should be used for configured debian package mirrors
 # --updates true -> defines if debian updates package archives should be included in the image or not
