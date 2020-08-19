@@ -44,7 +44,7 @@ echo task-xfce-desktop > $DIRECTORIO/config/package-lists/tareas.list.chroot
 echo task-ssh-server >> $DIRECTORIO/config/package-lists/tareas.list.chroot
 
 # Agrego paquetes
-echo "htop net-tools dnsutils libirs161" > $DIRECTORIO/config/package-lists/paquetes.list.chroot
+echo "htop net-tools dnsutils libirs161 openssh-server vim vim-runtime vim-common" > $DIRECTORIO/config/package-lists/paquetes.list.chroot
 
 # Archivo de respuestas pre-configurado
 wget https://github.com/fersfeir/DebianHLN/raw/master/preseed.cfg
