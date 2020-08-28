@@ -8,7 +8,7 @@ Script y configuraciones de pruebas para la generación de una live-build con GN
 ## Utilización
 Desde una instalación ya realizada de Debian Buster GNU/Linux, descargar el archivo y ejecutarlo (debe ser root):
 ```
-wget https://raw.githubusercontent.com/fersfeir/DebianHLN/master/GeneradorImagen.sh && sh GeneradorImagen.sh
+wget https://raw.githubusercontent.com/fersfeir/LiLen/master/GeneradorImagen.sh && sh GeneradorImagen.sh
 ```
 
 NiuX Servicios Informáticos - Neuquén - Patagonia Argentina
