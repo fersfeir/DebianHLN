@@ -8,7 +8,7 @@
 apt install -y live-build
 
 # Directorio donde se generará la imagen
-DIRECTORIO=/home/HLN-Distro
+DIRECTORIO=/home/LiLeN
 
 # Creo el directorio
 mkdir -p $DIRECTORIO
@@ -32,12 +32,12 @@ cd $DIRECTORIO
 # --debian-installer live -> When live is chosen, the live-installer udeb is included so that debian-installer will behave different than usual - instead of installing the debian system from packages from the medium or the network, it installs the live system to the disk
 # --debian-installer-gui true -> defines if the debian-installer graphical GTK interface should be true or not
 # --win32-loader false -> defines if win32-loader should be included in the binary image or not
-# --iso-application debianHLN -> sets the APPLICATION field in the header of a resulting CD/DVD image
+# --iso-application LiLeN -> sets the APPLICATION field in the header of a resulting CD/DVD image
 # --iso-preparer FerSfeir -> sets the PREPARER field in the header of a resulting CD/DVD image
 # --iso-publisher NiuX-https://niux.com.ar -> sets the PUBLISHED field in the header of a resulting CD/DVD image
-# --iso-volume debianHLN -> sets the VOLUME field in the header of a resulting CD/DVD
+# --iso-volume LiLeN -> sets the VOLUME field in the header of a resulting CD/DVD
 
-lb config --binary-images iso-hybrid --mode debian --architectures i386 --linux-flavours 686-pae --distribution buster --archive-areas "main contrib non-free" --updates true --security true --cache true --apt-recommends true --debian-installer live --debian-installer-gui true --win32-loader false --iso-application debianHLN --iso-preparer FerSfeir --iso-publisher NiuX-https://niux.com.ar --iso-volume debianHLN
+lb config --binary-images iso-hybrid --mode debian --architectures i386 --linux-flavours 686-pae --distribution buster --archive-areas "main contrib non-free" --updates true --security true --cache true --apt-recommends true --debian-installer live --debian-installer-gui true --win32-loader false --iso-application LiLeN --iso-preparer FerSfeir --iso-publisher NiuX-https://niux.com.ar --iso-volume LiLeN
 
 # Agrego tareas
 echo task-xfce-desktop > $DIRECTORIO/config/package-lists/tareas.list.chroot
@@ -47,7 +47,7 @@ echo task-ssh-server >> $DIRECTORIO/config/package-lists/tareas.list.chroot
 echo "htop net-tools dnsutils libirs161 openssh-server vim vim-runtime vim-common gvfs-backends libavahi-glib1 libcdio-cdda2 libcdio-paranoia2 libgdata-common libgdata22 libgoa-1.0-0b libgoa-1.0-common libmtp-common libmtp-runtime libmtp9 libnfs12 liboauth0 psmisc" > $DIRECTORIO/config/package-lists/paquetes.list.chroot
 
 # Archivo de respuestas pre-configurado
-wget https://github.com/fersfeir/DebianHLN/raw/master/preseed.cfg
+wget https://github.com/fersfeir/LiLeN/raw/master/preseed.cfg
 mv preseed.cfg $DIRECTORIO/config/includes.installer/preseed.cfg
 
 # Comienzo la generación de la imagen
