@@ -53,8 +53,8 @@ function unedominio () {
 		echo "Entraste a configurar el dominio. Recuerde que DEBE TENER CONFIGURADA CORRECTAMENTE LA RED/DNS!"
 		wget -O - http://repo.pbis.beyondtrust.com/apt/RPM-GPG-KEY-pbis|sudo apt-key add -
 		wget -O /etc/apt/sources.list.d/pbiso.list http://repo.pbis.beyondtrust.com/apt/pbiso.list
-		apt-get update
-		apt-get install -y pbis-open
+		apt update
+		apt install -y pbis-open
 		touch /home/LiLeN/unedominio.ejecutado
 		sleep 5
 	else echo "Usted ya ha ejecutado el script de instalacion con anterioridad."

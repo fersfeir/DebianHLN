@@ -1,0 +1,11 @@
+FUENTES:
+ICONOS
+web: https://www.xfce-look.org/p/1215834/
+git: https://github.com/B00merang-Project/Windows-10-Icons/archive/master.zip
+# https://www.xfce-look.org/p/1167936/ (no usado)
+
+
+
+THEME
+web: https://b00merang.weebly.com/windows-10.html
+git: https://github.com/B00merang-Project/windows-10
