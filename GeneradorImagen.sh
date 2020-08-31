@@ -37,14 +37,15 @@ cd $DIRECTORIO
 # --iso-publisher NiuX-https://niux.com.ar -> sets the PUBLISHED field in the header of a resulting CD/DVD image
 # --iso-volume LiLeN -> sets the VOLUME field in the header of a resulting CD/DVD
 
-lb config --binary-images iso-hybrid --mode debian --architectures i386 --linux-flavours 686-pae --distribution buster --archive-areas "main contrib non-free" --updates true --security true --cache true --apt-recommends true --debian-installer live --debian-installer-gui true --win32-loader false --iso-application LiLeN --iso-preparer FerSfeir --iso-publisher NiuX-https://niux.com.ar --iso-volume LiLeN
+# lb config --binary-images iso-hybrid --mode debian --architectures i386 --linux-flavours 686-pae --distribution buster --archive-areas "main contrib non-free" --updates true --security true --cache true --apt-recommends true --debian-installer live --debian-installer-gui true --win32-loader false --iso-application LiLeN --iso-preparer FerSfeir --iso-publisher NiuX-https://niux.com.ar --iso-volume LiLeN
+lb config --binary-images iso-hybrid --mode debian --architectures amd64 --distribution buster --archive-areas "main contrib non-free" --updates true --security true --cache true --apt-recommends true --debian-installer live --debian-installer-gui true --win32-loader false --iso-application LiLeN --iso-preparer FerSfeir --iso-publisher HLN-https://legnqn.gob.com.ar --iso-volume LiLeN
 
 # Agrego tareas
 echo task-xfce-desktop > $DIRECTORIO/config/package-lists/tareas.list.chroot
 echo task-ssh-server >> $DIRECTORIO/config/package-lists/tareas.list.chroot
 
 # Agrego paquetes
-echo "htop net-tools dnsutils libirs161 openssh-server vim vim-runtime vim-common gvfs-backends libavahi-glib1 libcdio-cdda2 libcdio-paranoia2 libgdata-common libgdata22 libgoa-1.0-0b libgoa-1.0-common libmtp-common libmtp-runtime libmtp9 libnfs12 liboauth0 psmisc" > $DIRECTORIO/config/package-lists/paquetes.list.chroot
+echo "htop net-tools dnsutils libirs161 openssh-server vim vim-runtime vim-common gvfs-backends libavahi-glib1 libcdio-cdda2 libcdio-paranoia2 libgdata-common libgdata22 libgoa-1.0-0b libgoa-1.0-common libmtp-common libmtp-runtime libmtp9 libnfs12 liboauth0 psmisc dialog" > $DIRECTORIO/config/package-lists/paquetes.list.chroot
 
 # Archivo de respuestas pre-configurado
 wget https://github.com/fersfeir/LiLeN/raw/master/preseed.cfg
