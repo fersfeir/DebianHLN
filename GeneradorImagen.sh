@@ -10,11 +10,27 @@ apt install -y live-build
 # Directorio donde se generará la imagen
 DIRECTORIO=/home/LiLeN
 
-# Creo el directorio
-mkdir -p $DIRECTORIO
+# Copio el theme a utlizar
+mkdir -p $DIRECTORIO/chroot/usr/share/themes/ 
+cp -r imagen/Windows-10-theme $DIRECTORIO/chroot/usr/share/themes/
+
+# Copio el fondo de pantalla, icono de inicio y pantallas de inicio
+mkdir -p $DIRECTORIO/chroot/usr/share/images/
+cp -r imagen/desktop-base $DIRECTORIO/chroot/usr/share/images/
+
+# Agrego los paquetes adicionales 
+mkdir -p $DIRECTORIO/config/packages.chroot/
+cp paquetes/* $DIRECTORIO/config/packages.chroot/
+
+# Archivo de respuestas pre-configurado
+mkdir -p $DIRECTORIO/config/includes.installer/
+cp preseed.cfg $DIRECTORIO/config/includes.installer/
 
 # Me posiciono en el directorio creado
 cd $DIRECTORIO
+
+# lb clean -> is  responsible  for  cleaning up after a system is built. It removes the build directories, and removes some other files including stage files,  and  any  detritus  left behind by other live-build commands.
+#lb clean
 
 # Genero la estructura de configuración
 # Las opciones utilizadas son:
@@ -47,14 +63,7 @@ echo task-ssh-server >> $DIRECTORIO/config/package-lists/tareas.list.chroot
 # Agrego paquetes
 echo "htop net-tools dnsutils libirs161 openssh-server vim vim-runtime vim-common gvfs-backends libavahi-glib1 libcdio-cdda2 libcdio-paranoia2 libgdata-common libgdata22 libgoa-1.0-0b libgoa-1.0-common libmtp-common libmtp-runtime libmtp9 libnfs12 liboauth0 psmisc dialog" > $DIRECTORIO/config/package-lists/paquetes.list.chroot
 
-# Archivo de respuestas pre-configurado
-cp -r imagen/Windows-10-theme $DIRECTORIO/chroot/usr/share/themes/
-cp -r imagen/desktop-base/* $DIRECTORIO/chroot/usr/share/images/desktop-base/
-cp -r paquetes/* $DIRECTORIO/config/packages.chroot/
-cp preseed.cfg $DIRECTORIO/config/includes.installer/preseed.cfg
-
 # Comienzo la generación de la imagen
-# lb clean -> is  responsible  for  cleaning up after a system is built. It removes the build directories, and removes some other files including stage files,  and  any  detritus  left behind by other live-build commands.
 # lb build -> alias for all build stages
 
-lb clean ; lb build
+lb build
