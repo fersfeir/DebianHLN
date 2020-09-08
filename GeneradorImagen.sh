@@ -73,7 +73,7 @@ echo task-xfce-desktop > $DIRECTORIO/config/package-lists/tareas.list.chroot
 echo task-ssh-server >> $DIRECTORIO/config/package-lists/tareas.list.chroot
 
 # Agrego paquetes
-echo "htop net-tools dnsutils libirs161 openssh-server vim vim-runtime vim-common gvfs-backends libavahi-glib1 libcdio-cdda2 libcdio-paranoia2 libgdata-common libgdata22 libgoa-1.0-0b libgoa-1.0-common libmtp-common libmtp-runtime libmtp9 libnfs12 liboauth0 psmisc dialog" > $DIRECTORIO/config/package-lists/paquetes.list.chroot
+echo "htop net-tools dnsutils libirs161 openssh-server dialog vim vim-runtime vim-common gvfs-backends libavahi-glib1 libcdio-cdda2 libcdio-paranoia2 libgdata-common libgdata22 libgoa-1.0-0b libgoa-1.0-common libmtp-common libmtp-runtime libmtp9 libnfs12 liboauth0 psmisc dialog" > $DIRECTORIO/config/package-lists/paquetes.list.chroot
 
 # Comienzo la generación de la imagen
 # lb build -> alias for all build stages
