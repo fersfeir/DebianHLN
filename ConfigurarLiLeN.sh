@@ -75,7 +75,15 @@ function configuraansible () {
 function configuraescritorio () {
 	if [ ! -f /home/LiLeN/configuraescritorio.ejecutado ]; then
 		echo "Entraste a configurar la apariencia del escritorio!"
+		mkdir ~/.config
+		cp -r imagen/xfce4 ~/.config/
+		echo "Se le solicitará ingresar la clave de administración del equipo"
+		sudo mkdir /etc/skel/.config
+	        sudo cp -r imagen/xfce4 /etc/skel/.config/ 	
 		touch /home/LiLeN/configuraescritorio.ejecutado
+		sudo cp -r imagen/desktop-base /usr/share/images/
+		sudo cp -r imagen/Windows-10-theme /usr/share/themes/
+		sudo dpkg -i paquetes/windows10-icons_1.2_all.deb
 		sleep 5
 	else echo "Usted ya ha ejecutado el script de instalacion con anterioridad."
 	fi

@@ -11,12 +11,12 @@ apt install -y live-build
 DIRECTORIO=/home/LiLeN
 
 # Copio el theme a utlizar
-mkdir -p $DIRECTORIO/chroot/usr/share/themes/ 
-cp -r imagen/Windows-10-theme $DIRECTORIO/chroot/usr/share/themes/
+mkdir -p $DIRECTORIO/config/includes.chroot/usr/share/themes/ 
+cp -r imagen/Windows-10-theme $DIRECTORIO/config/includes.chroot/usr/share/themes/
 
 # Copio el fondo de pantalla, icono de inicio y pantallas de inicio
-mkdir -p $DIRECTORIO/chroot/usr/share/images/
-cp -r imagen/desktop-base $DIRECTORIO/chroot/usr/share/images/
+mkdir -p $DIRECTORIO/config/includes.chroot/usr/share/images/
+cp -r imagen/desktop-base $DIRECTORIO/config/includes.chroot/usr/share/images/
 
 # Agrego los paquetes adicionales 
 mkdir -p $DIRECTORIO/config/packages.chroot/
@@ -54,7 +54,7 @@ cd $DIRECTORIO
 # --iso-volume LiLeN -> sets the VOLUME field in the header of a resulting CD/DVD
 
 # lb config --binary-images iso-hybrid --mode debian --architectures i386 --linux-flavours 686-pae --distribution buster --archive-areas "main contrib non-free" --updates true --security true --cache true --apt-recommends true --debian-installer live --debian-installer-gui true --win32-loader false --iso-application LiLeN --iso-preparer FerSfeir --iso-publisher NiuX-https://niux.com.ar --iso-volume LiLeN
-lb config --binary-images iso-hybrid --mode debian --architectures amd64 --distribution buster --archive-areas "main contrib non-free" --updates true --security true --cache true --apt-recommends true --debian-installer live --debian-installer-gui true --win32-loader false --iso-application LiLeN --iso-preparer FerSfeir --iso-publisher HLN-https://legnqn.gob.com.ar --iso-volume LiLeN
+lb config --binary-images iso-hybrid --mode debian --architectures amd64 --distribution buster --archive-areas "main contrib non-free" --updates true --security true --cache true --apt-recommends true --debian-installer live --debian-installer-gui true --win32-loader false --iso-application "LiLeN" --iso-preparer "FerSfeir" --iso-publisher "HLN-https://legnqn.gob.com.ar" --iso-volume "LiLeN"
 
 # Agrego tareas
 echo task-xfce-desktop > $DIRECTORIO/config/package-lists/tareas.list.chroot
