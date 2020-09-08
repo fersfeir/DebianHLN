@@ -18,9 +18,21 @@ cp -r imagen/Windows-10-theme $DIRECTORIO/config/includes.chroot/usr/share/theme
 mkdir -p $DIRECTORIO/config/includes.chroot/usr/share/images/
 cp -r imagen/desktop-base $DIRECTORIO/config/includes.chroot/usr/share/images/
 
+# Copio la configuracion de xfce para los usuarios a crear
+mkdir -p $DIRECTORIO/config/includes.chroot/etc/skel/.config
+cp -r imagen/xfce4 $DIRECTORIO/config/includes.chroot/etc/skel/.config
+
+# Copio la configuracion de xfce para el usuario por defecto
+#mkdir -p $DIRECTORIO/config/includes.chroot/home/lilen/.config
+#cp -r imagen/xfce4 $DIRECTORIO/config/includes.chroot/home/lilen/.config
+
 # Agrego los paquetes adicionales 
 mkdir -p $DIRECTORIO/config/packages.chroot/
 cp paquetes/* $DIRECTORIO/config/packages.chroot/
+
+# Agrego el script de configuracion
+mkdir -p $DIRECTORIO/config/includes.chroot/usr/sbin
+cp ConfigurarLiLeN.sh $DIRECTORIO/config/includes.chroot/usr/sbin
 
 # Archivo de respuestas pre-configurado
 mkdir -p $DIRECTORIO/config/includes.installer/
