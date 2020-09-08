@@ -120,7 +120,7 @@ Proceda bajo su propio riesgo y RECUERDE REALIZAR UNA COPIA DE SEGURIDAD (BACKUP
 		instaladebs
 		configurared
 		configurahostname
-		unedominio $1	
+		unedominio 	
 		configuraansible	
 		configuraescritorio
 		;;
@@ -140,7 +140,7 @@ Proceda bajo su propio riesgo y RECUERDE REALIZAR UNA COPIA DE SEGURIDAD (BACKUP
         dialog --backtitle "Honorable Legislatura del Neuquen" \
         --title "Unir a un dominio existente" \
        --msgbox "Se realizara la unión a un dominio existente." 18 60
-		unedominio $1
+		unedominio 
 		;;
 	5 )
         dialog --backtitle "Honorable Legislatura del Neuquen" \
@@ -183,7 +183,7 @@ which dialog &> /dev/null
 requisitos
 autor
 case $? in
-	0 ) menu $1
+	0 ) menu 
 	;;
  
 	1 ) clear && exit
